@@ -5,7 +5,7 @@ module.exports = {
     params: {
         dialect: 'mysql',
         define: {
-            userscore: true
+            userscore: true,
         }
     }
 };

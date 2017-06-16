@@ -1,21 +1,27 @@
 {
-  "name": "api_node",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "start": "babel-node index.js"
-  },
-  "author": "",
-  "description": "",
-  "dependencies": {
-    "babel": "^6.23.0",
-    "body-parser": "^1.17.2",
-    "consign": "^0.1.5",
-    "express": "^4.15.3",
-    "mysql2": "^1.3.5",
-    "sequelize": "^4.1.0"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.24.1"
-  }
+	"name": "api_node",
+	"version": "1.0.0",
+	"main": "index.js",
+	"engines": {
+		"node": ">=7.0.0"
+	},
+	"scripts": {
+		"start": "babel-node index.js"
+	},
+	"author": "",
+	"description": "",
+	"dependencies": {
+		"babel": "^6.23.0",
+		"body-parser": "^1.17.2",
+		"consign": "^0.1.5",
+		"express": "^4.15.3",
+		"mysql2": "^1.3.5",
+		"sequelize": "^4.1.0"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.24.1",
+		"eslint": "^4.0.0",
+		"eslint-plugin-import": "^2.3.0",
+		"eslint-plugin-node": "^5.0.0"
+	}
 }
