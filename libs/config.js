@@ -7,5 +7,7 @@ module.exports = {
         define: {
             userscore: true,
         }
-    }
+    },
+    jwtSecret: 'Nta$k-AP1',
+    jwtSession: {session: false}
 };

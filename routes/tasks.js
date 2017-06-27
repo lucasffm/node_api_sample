@@ -1,9 +1,8 @@
 module.exports = (app) => {
-    const Tasks = app.db.models.Tasks;
     const TasksController = app.controllers.TasksController;
-    app.get('/tasks', TasksController.index);    
-    app.post('/tasks', TasksController.create);
-    app.get('/tasks/:id', TasksController.findOne);
-    app.put('/tasks/:id', TasksController.updateOne);
-    app.delete('/tasks/:id', TasksController.delete);
+    app.route('/tasks').all(app.auth.authenticate()).get(TasksController.index);
+    app.route('/tasks').all(app.auth.authenticate()).post(TasksController.create);
+    app.route('/tasks/:id').all(app.auth.authenticate()).get(TasksController.findOne);
+    app.route('/tasks/:id').all(app.auth.authenticate()).put(TasksController.updateOne);
+    app.route('/tasks/:id').all(app.auth.authenticate()).delete(TasksController.delete);
 };
